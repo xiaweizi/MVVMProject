@@ -9,6 +9,6 @@ public class MainActivity extends MainContact.View{
 
     @Override
     public void initView() {
-
     }
+
 }
