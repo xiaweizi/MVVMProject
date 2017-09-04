@@ -13,8 +13,8 @@ import com.weaponzhi.mvvmproject.common.BaseViewModel;
 
 
 interface MainContact {
-    abstract class Model extends BaseModel {
-        abstract void dataManager();
+    abstract class Model extends BaseModel<ViewModel> {
+        abstract void onHttpRequest();
     }
 
 
@@ -22,8 +22,8 @@ interface MainContact {
         void onResponse();
     }
 
-    abstract class ViewModel extends BaseViewModel<View,MainModel> {
-        abstract void getInitData();
+    abstract class ViewModel extends BaseViewModel<View,Model> {
+        abstract void getData();
         abstract void onSuccess();
         abstract void onError();
     }
