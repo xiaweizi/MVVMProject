@@ -1,28 +1,24 @@
-package com.weaponzhi.mvvmproject.main;
+package com.weaponzhi.mvvmproject.home;
 
 import android.databinding.ObservableField;
+import android.view.View;
 
 /**
- * Model 首页 model
- * author:张冠之
- * time: 2017/8/29 下午1:30
- * e-mail: guanzhi.zhang@sojex.cn
+ * Created by WeaponZhi on 2017/9/3.
  */
 
-public class MainModel extends MainContact.Model {
-
+public class HomeModel extends HomeContact.Model{
     public ObservableField<String> username = new ObservableField<>();
     public ObservableField<String> nickname = new ObservableField<>();
     public ObservableField<Integer> age = new ObservableField<>();
 
-    public MainModel(String username,String nickname,int age){
+    public HomeModel(String username,String nickname,int age){
         this.username.set(username);
         this.nickname.set(nickname);
         this.age.set(age);
     }
 
-    @Override
-    void dataManager() {
-
+    public void onItemClick(View view){
+        username.set("111");
     }
 }
